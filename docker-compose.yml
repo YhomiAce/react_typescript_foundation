@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  frontend:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app/src
+      - ./node_modules:/app/src/node_modules
+    ports:
+      - 3000:3000
